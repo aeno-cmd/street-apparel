@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Apparel - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/street-apparel-logo.png"
+    />
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">STREET APPAREL</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> <span>Home</span></a></li>
+            <li><a href="index.html#section-2"><i class="fa-solid fa-store"></i> <span>Shop</span></a></li>
+            <li><a href="address.html"><i class="fa-solid fa-map-marker-alt"></i> <span>Address</span></a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-shopping-cart"></i> <span>Cart</span></a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i> <span>Log out</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <h2>My Cart</h2>
+
+            <div class="cart-item">
+                <div>
+                    <img src="images/basahan.jpg" alt="Product Image" class="item-image" />
+                </div>
+
+                <div class="item-details">
+                    <h3>Damit ni Bugoy na koykoy</h3>
+                    <p>Color: Khaki</p>
+                    <p>Size: S</p>
+                    <p>Quantity: 1</p>
+                </div>
+                <div class="item-price">P139.99</div>
+            </div>
+
+            <div class="cart-item">
+                <div>
+                    <img src="images/red-clothes.jpg" alt="Product Image" class="item-image" />
+                </div>
+                <div class="item-details">
+                    <h3>Shorts na pula</h3>
+                    <p>Color: Red</p>
+                    <p>Size: M</p>
+                    <p>Quantity: 2</p>
+                </div>
+                <div class="item-price">P129.99</div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Summary</h2>
+
+            <div class="summary-item">
+                <label for="promo">Enter Promo Code:</label>
+            </div>
+            <div class="summary-item">
+                <input type="text" id="promo" placeholder="Promo Code" />
+            </div>
+
+            <div class="summary-item">
+                <span>Shipping:</span>
+                <span>P64.00</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Discount:</span>
+                <span>P50.00</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Estimated Delivery:</span>
+                <span>2-3 Days</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Tax:</span>
+                <span>P0.00</span>
+            </div>
+
+            <div class="summary-total">
+                <span>Total:</span>
+                <span>P269.98</span>
+            </div>
+
+        
+
+            <a href="index.html" class="checkout-btn" onclick="alert('Order will be shipped soon!')">Checkout</a>
+        </div>
+    </div>
+    
+</body>
+
+</html>

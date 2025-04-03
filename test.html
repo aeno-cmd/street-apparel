@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Apparel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #D4C2AB;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #3A3A3A;
+            font-weight: 600;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .nav-links li a:hover {
+            color: #2C2C2C;
+        }
+
+        /* Page Sections */
+        .page {
+            display: none;
+            padding: 100px 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Button */
+        .btn {
+            background-color: #3A3A3A;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #2C2C2C;
+        }
+
+        /* Form Styling */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #4a403a;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        button {
+            background-color: #a67c52;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8a6542;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">STREET APPAREL</div>
+        <ul class="nav-links">
+            <li><a onclick="showPage('home')"><i class="fa-solid fa-home"></i> Home</a></li>
+            <li><a onclick="showPage('shop')"><i class="fa-solid fa-store"></i> Shop</a></li>
+            <li><a onclick="showPage('address')"><i class="fa-solid fa-map-marker-alt"></i> Address</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <h1>Welcome to Street Apparel</h1>
+        <p>Minimal. Timeless. Streetwear.</p>
+        <a onclick="showPage('shop')" class="btn">Shop Now</a>
+    </div>
+    
+    <!-- Shop Page -->
+    <div id="shop" class="page">
+        <h2>Our Collection</h2>
+        <div class="product">
+            <h3>Classic Hoodie - $49.99</h3>
+            <a onclick="showPage('address')" class="btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <h3>Minimalist T-Shirt - $29.99</h3>
+            <a onclick="showPage('address')" class="btn">Buy Now</a>
+        </div>
+        <div class="product">
+            <h3>Urban Fit Jeans - $59.99</h3>
+            <a onclick="showPage('address')" class="btn">Buy Now</a>
+        </div>
+    </div>
+
+    <!-- Address Form Page -->
+    <div id="address" class="page">
+        <div class="container">
+            <h2>Shipping Address</h2>
+            <form>
+                <label>Full Name</label><input type="text">
+                <label>Email</label><input type="email">
+                <label>Phone</label><input type="tel">
+                <label>Street Address</label><textarea></textarea>
+                <label>City</label><input type="text">
+                <label>ZIP Code</label><input type="text">
+                <label>Country</label>
+                <select>
+                    <option value="">Select Country</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Street Apparel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll(".page");
+            pages.forEach(page => page.classList.remove("active"));
+
+            // Show the selected page
+            document.getElementById(pageId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

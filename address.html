@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Apparel - Address</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/street-apparel-logo.png"
+    />
+    <style>
+      nav {
+        position: static;
+      }
+
+      .address-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        background: var(--background);
+      }
+      .address-form-container {
+        width: 400px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .address-form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--text);
+      }
+      .address-form-container form input[type="text"],
+      .address-form-container form input[type="email"],
+      .address-form-container form input[type="tel"],
+      .address-form-container form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: "Poppins", sans-serif;
+      }
+      .address-form-container form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #3a3a3a;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+      }
+      .address-form-container form input[type="submit"]:hover {
+        background: #5a5a5a;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><a href="index.html">STREET APPAREL</a></div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html"
+            ><i class="fa-solid fa-home"></i> <span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html#section-2"
+            ><i class="fa-solid fa-store"></i> <span>Shop</span></a
+          >
+        </li>
+        <li>
+          <a href="address.html"
+            ><i class="fa-solid fa-map-marker-alt"></i> <span>Address</span></a
+          >
+        </li>
+        <li>
+          <a href="cart.html"
+            ><i class="fa-solid fa-shopping-cart"></i> <span>Cart</span></a
+          >
+        </li>
+        <li><a href="login.html"><i class="fa-solid fa-user"></i> <span>Log out</span></a></li>
+      </ul>
+    </nav>
+    <div class="address-wrapper">
+      <div class="address-form-container">
+        <h2>Enter Your Address</h2>
+        <form onsubmit="submitAddress(event)">
+          <input type="text" id="fullName" placeholder="Full Name" required />
+          <input
+            type="text"
+            id="streetAddress"
+            placeholder="Street Address"
+            required
+          />
+          <input type="text" id="city" placeholder="City" required />
+          <input type="text" id="state" placeholder="State/Province" required />
+          <input
+            type="text"
+            id="zipCode"
+            placeholder="Zip/Postal Code"
+            required
+          />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+          <input type="submit" value="Submit Address" onclick="alert('Address Saved!'); window.location.href='index.html';" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
